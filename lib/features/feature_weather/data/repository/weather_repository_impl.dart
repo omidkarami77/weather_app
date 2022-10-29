@@ -39,13 +39,12 @@ class WeatherRepositoryImpl extends WeatherRepository {
 
       if (response.statusCode == 200) {
         ForeCastDaysEntity forecastDaysEntity =
-            ForeCastDaysModels.fromJson(response.data);
+            ForecastDaysModel.fromJson(response.data);
         return DataSuccess(forecastDaysEntity);
       } else {
         return const DataFailed("Something Went Wrong. try again...");
       }
     } catch (e) {
-      print(e.toString());
       return const DataFailed("please check your connection...");
     }
   }
