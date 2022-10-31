@@ -9,6 +9,9 @@ import 'package:weather_app/features/feature_weather/domain/repository/weather_r
 
 import 'package:dio/dio.dart';
 
+import '../../domain/entities/suggest_city_entity.dart';
+import '../model/suggest_city_model.dart';
+
 class WeatherRepositoryImpl extends WeatherRepository {
   ApiProvider apiProvider;
 
@@ -47,5 +50,15 @@ class WeatherRepositoryImpl extends WeatherRepository {
     } catch (e) {
       return const DataFailed("please check your connection...");
     }
+  }
+
+  @override
+  Future<List<Data>> fetchSuggestData(cityName) async {
+    Response response = await apiProvider.sendRequestCitySuggestion(cityName);
+
+    SuggestCityEntity suggestCityEntity =
+        SuggestCityModel.fromJson(response.data);
+
+    return suggestCityEntity.data!;
   }
 }

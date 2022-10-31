@@ -6,6 +6,8 @@ import 'package:weather_app/features/feature_weather/presentation/bloc/bloc/home
 import 'package:weather_app/locator.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   //init getIt Locator
   await setup();
   runApp(
