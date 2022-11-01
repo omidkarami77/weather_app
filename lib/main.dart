@@ -5,6 +5,8 @@ import 'package:weather_app/features/feature_weather/presentation/bloc/bloc/home
 
 import 'package:weather_app/locator.dart';
 
+import 'features/feature_bookmark/presentation/bloc/bookmark_bloc.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -27,6 +29,7 @@ class MyApp extends StatelessWidget {
           BlocProvider(
             create: (context) => locator<HomeBloc>(),
           ),
+          BlocProvider(create: (_) => locator<BookmarkBloc>()),
         ],
         child: MainWrapper(),
       ),
