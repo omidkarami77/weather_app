@@ -1,20 +1,19 @@
 import 'package:get_it/get_it.dart';
-import 'package:weather_app/features/feature_bookmark/data/data_source/local/database.dart';
-import 'package:weather_app/features/feature_bookmark/data/repository/city_repository_impl.dart';
-import 'package:weather_app/features/feature_bookmark/domain/repository/city_repository.dart';
-import 'package:weather_app/features/feature_bookmark/presentation/bloc/bookmark_bloc.dart';
-import 'package:weather_app/features/feature_weather/data/data_source/remote/api_provider.dart';
-import 'package:weather_app/features/feature_weather/data/repository/weather_repository_impl.dart';
-import 'package:weather_app/features/feature_weather/domain/repository/weather_repository.dart';
-import 'package:weather_app/features/feature_weather/domain/usecases/get_current_weather_usecase.dart.dart';
-import 'package:weather_app/features/feature_weather/domain/usecases/get_forecast_weather_usecase.dart.dart';
-import 'package:weather_app/features/feature_weather/presentation/bloc/bloc/home_bloc.dart';
 
+import 'features/feature_bookmark/data/data_source/local/database.dart';
+import 'features/feature_bookmark/data/repository/city_repository_impl.dart';
 import 'features/feature_bookmark/domain/usecases/delete_city_usecase.dart';
 import 'features/feature_bookmark/domain/usecases/get_all_city_usecase.dart';
 import 'features/feature_bookmark/domain/usecases/get_city_usecase.dart';
 import 'features/feature_bookmark/domain/usecases/save_city_usecase.dart';
-import 'package:weather_app/features/feature_bookmark/data/repository/city_repository_impl.dart';
+import 'features/feature_bookmark/presentation/bloc/bookmark_bloc.dart';
+import 'features/feature_weather/data/data_source/remote/api_provider.dart';
+import 'features/feature_weather/data/repository/weather_repository_impl.dart';
+import 'features/feature_weather/domain/repository/city_repository.dart';
+import 'features/feature_weather/domain/repository/weather_repository.dart';
+import 'features/feature_weather/domain/usecases/get_current_weather_usecase.dart.dart';
+import 'features/feature_weather/domain/usecases/get_forecast_weather_usecase.dart.dart';
+import 'features/feature_weather/presentation/bloc/bloc/home_bloc.dart';
 
 GetIt locator = GetIt.instance;
 

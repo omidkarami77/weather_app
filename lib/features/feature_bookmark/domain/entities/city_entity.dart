@@ -11,6 +11,5 @@ class City extends Equatable {
   City({required this.name});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [name];
 }

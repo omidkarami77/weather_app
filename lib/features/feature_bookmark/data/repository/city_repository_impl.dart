@@ -1,7 +1,8 @@
+import 'package:weather_app/core/resources/data_state.dart';
 import 'package:weather_app/features/feature_bookmark/data/data_source/local/city_dao.dart';
 import 'package:weather_app/features/feature_bookmark/domain/entities/city_entity.dart';
-import 'package:weather_app/core/resources/data_state.dart';
-import 'package:weather_app/features/feature_weather/domain/repository/city_repository.dart';
+
+import '../../../feature_weather/domain/repository/city_repository.dart';
 
 class CityRepositoryImpl extends CityRepository {
   CityDao cityDao;
