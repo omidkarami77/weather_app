@@ -1,3 +1,5 @@
+// ignore_for_file: type_annotate_public_apis, prefer_final_locals, avoid_print, require_trailing_commas
+
 import 'package:dio/dio.dart';
 import 'package:weather_app/core/params/ForecastParams.dart';
 import 'package:weather_app/core/utils/constans.dart';

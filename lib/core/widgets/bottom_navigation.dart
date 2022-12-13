@@ -1,13 +1,14 @@
+// ignore_for_file: non_constant_identifier_names, require_trailing_commas
+
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class BottomNav extends StatelessWidget {
   PageController Controller;
-  BottomNav({Key? key, required this.Controller}) : super(key: key);
+  BottomNav({super.key, required this.Controller});
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
-
     return BottomAppBar(
       shape: const CircularNotchedRectangle(),
       notchMargin: 5,

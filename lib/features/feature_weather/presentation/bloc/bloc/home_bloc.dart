@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, prefer_final_locals
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';

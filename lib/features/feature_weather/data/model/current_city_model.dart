@@ -1,53 +1,50 @@
+// ignore_for_file: must_be_immutable, unnecessary_new, unnecessary_this, duplicate_ignore, prefer_collection_literals
+
 import 'package:weather_app/features/feature_weather/domain/entities/current_city_entity.dart';
 
 class CurrentCityModel extends CurrentCityEntity {
   CurrentCityModel({
-    Coord? coord,
-    List<Weather>? weather,
-    String? base,
-    Main? main,
-    int? visibility,
-    Wind? wind,
-    Clouds? clouds,
-    int? dt,
-    Sys? sys,
-    int? timezone,
-    int? id,
-    String? name,
-    int? cod,
-  }) : super(
-            coord: coord,
-            weather: weather,
-            base: base,
-            main: main,
-            visibility: visibility,
-            wind: wind,
-            clouds: clouds,
-            dt: dt,
-            sys: sys,
-            timezone: timezone,
-            id: id,
-            name: name,
-            cod: cod);
+    super.coord,
+    super.weather,
+    super.base,
+    super.main,
+    super.visibility,
+    super.wind,
+    super.clouds,
+    super.dt,
+    super.sys,
+    super.timezone,
+    super.id,
+    super.name,
+    super.cod,
+  });
 
   factory CurrentCityModel.fromJson(Map<String, dynamic> json) {
+    // ignore: prefer_final_locals
     List<Weather> weather = [];
 
     if (json['weather'] != null) {
+      // ignore: avoid_dynamic_calls
       json['weather'].forEach((v) {
+        // ignore: unnecessary_new
         weather.add(new Weather.fromJson(v));
       });
     }
     return CurrentCityModel(
+      // ignore: unnecessary_new
       coord: json['coord'] != null ? new Coord.fromJson(json['coord']) : null,
       weather: weather,
       base: json['base'],
+      // ignore: unnecessary_new
       main: json['main'] != null ? new Main.fromJson(json['main']) : null,
       visibility: json['visibility'],
+      // ignore: unnecessary_new
       wind: json['wind'] != null ? new Wind.fromJson(json['wind']) : null,
       clouds:
+          // ignore: unnecessary_new
           json['clouds'] != null ? new Clouds.fromJson(json['clouds']) : null,
       dt: json['dt'],
+      // ignore: unnecessary_new
       sys: json['sys'] != null ? new Sys.fromJson(json['sys']) : null,
       timezone: json['timezone'],
       id: json['id'],
@@ -57,7 +54,7 @@ class CurrentCityModel extends CurrentCityEntity {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
+    final Map<String, dynamic> data = <String, dynamic>{};
     if (this.coord != null) {
       data['coord'] = this.coord!.toJson();
     }
@@ -65,14 +62,18 @@ class CurrentCityModel extends CurrentCityEntity {
       data['weather'] = this.weather!.map((v) => v.toJson()).toList();
     }
     data['base'] = this.base;
+    // ignore: unnecessary_this
     if (this.main != null) {
       data['main'] = this.main!.toJson();
     }
+    // ignore: unnecessary_this
     data['visibility'] = this.visibility;
     if (this.wind != null) {
+      // ignore: unnecessary_this
       data['wind'] = this.wind!.toJson();
     }
     if (this.clouds != null) {
+      // ignore: unnecessary_this
       data['clouds'] = this.clouds!.toJson();
     }
     data['dt'] = this.dt;
@@ -139,13 +140,14 @@ class Main {
   int? pressure;
   int? humidity;
 
-  Main(
-      {this.temp,
-      this.feelsLike,
-      this.tempMin,
-      this.tempMax,
-      this.pressure,
-      this.humidity});
+  Main({
+    this.temp,
+    this.feelsLike,
+    this.tempMin,
+    this.tempMax,
+    this.pressure,
+    this.humidity,
+  });
 
   Main.fromJson(Map<String, dynamic> json) {
     temp = json['temp'];
@@ -211,13 +213,14 @@ class Sys {
   int? sunrise;
   int? sunset;
 
-  Sys(
-      {this.type,
-      this.id,
-      this.message,
-      this.country,
-      this.sunrise,
-      this.sunset});
+  Sys({
+    this.type,
+    this.id,
+    this.message,
+    this.country,
+    this.sunrise,
+    this.sunset,
+  });
 
   Sys.fromJson(Map<String, dynamic> json) {
     type = json['type'];

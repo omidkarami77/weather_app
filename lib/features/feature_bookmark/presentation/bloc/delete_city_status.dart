@@ -4,14 +4,12 @@ abstract class DeleteCityStatus extends Equatable {}
 
 class DeleteCityInitial extends DeleteCityStatus {
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
 // loading state
 class DeleteCityLoading extends DeleteCityStatus {
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -21,7 +19,6 @@ class DeleteCityCompleted extends DeleteCityStatus {
   DeleteCityCompleted(this.name);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [name];
 }
 
@@ -31,6 +28,5 @@ class DeleteCityError extends DeleteCityStatus {
   DeleteCityError(this.message);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message];
 }

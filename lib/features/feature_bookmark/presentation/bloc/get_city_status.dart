@@ -1,13 +1,12 @@
 import 'package:equatable/equatable.dart';
 
-import '../../domain/entities/city_entity.dart';
+import 'package:weather_app/features/feature_bookmark/domain/entities/city_entity.dart';
 
 abstract class GetCityStatus extends Equatable {}
 
 // loading state
 class GetCityLoading extends GetCityStatus {
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 
@@ -17,7 +16,6 @@ class GetCityCompleted extends GetCityStatus {
   GetCityCompleted(this.city);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [city];
 }
 
@@ -27,6 +25,5 @@ class GetCityError extends GetCityStatus {
   GetCityError(this.message);
 
   @override
-  // TODO: implement props
   List<Object?> get props => [message];
 }

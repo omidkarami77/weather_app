@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, type_annotate_public_apis, require_trailing_commas, always_declare_return_types
+
 import 'package:get_it/get_it.dart';
 
 import 'features/feature_bookmark/data/data_source/local/database.dart';

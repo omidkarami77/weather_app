@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/core/widgets/main_wrapper.dart';

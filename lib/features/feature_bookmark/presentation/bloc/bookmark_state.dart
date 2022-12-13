@@ -1,3 +1,5 @@
+// ignore_for_file: require_trailing_commas
+
 part of 'bookmark_bloc.dart';
 
 class BookmarkState extends Equatable {
@@ -27,7 +29,6 @@ class BookmarkState extends Equatable {
   }
 
   @override
-  // TODO: implement props
   List<Object?> get props =>
       [getCityStatus, saveCityStatus, getAllCityStatus, deleteCityStatus];
 }

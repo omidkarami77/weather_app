@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, avoid_unnecessary_containers, prefer_const_constructors, require_trailing_commas, prefer_final_locals, unnecessary_null_checks, type_annotate_public_apis
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
@@ -6,7 +8,6 @@ import 'package:weather_app/core/params/ForecastParams.dart';
 import 'package:weather_app/core/widgets/app_background.dart';
 import 'package:weather_app/core/widgets/dot_loading_widget.dart';
 import 'package:weather_app/features/feature_bookmark/presentation/bloc/bookmark_bloc.dart';
-import 'package:weather_app/features/feature_weather/data/data_source/remote/api_provider.dart';
 import 'package:weather_app/features/feature_weather/data/model/forecast_days_models.dart';
 import 'package:weather_app/features/feature_weather/data/model/suggest_city_model.dart';
 import 'package:weather_app/features/feature_weather/domain/entities/forecast_days_entity.dart';
@@ -44,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-    final width = MediaQuery.of(context).size.width;
 
     return SafeArea(
         child: Column(
@@ -92,9 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
               /// change Times to Hour --5:55 AM/PM----
               final sunrise = DateConverter.changeDtToDateTimeHour(
-                  cityEntity.sys!.sunrise, cityEntity.timezone);
+                  cityEntity.sys!.sunrise!, cityEntity.timezone!);
               final sunset = DateConverter.changeDtToDateTimeHour(
-                  cityEntity.sys!.sunset, cityEntity.timezone);
+                  cityEntity.sys!.sunset!, cityEntity.timezone!);
 
               return Expanded(
                   child: ListView(
@@ -462,7 +462,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   searchh() {
-    final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: width * 0.03),

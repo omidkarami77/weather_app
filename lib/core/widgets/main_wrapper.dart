@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, prefer_final_locals
+
 import 'package:flutter/material.dart';
 import 'package:weather_app/core/widgets/app_background.dart';
 import 'package:weather_app/features/feature_bookmark/presentation/screens/bookmark_screen.dart';
@@ -6,9 +8,9 @@ import 'package:weather_app/features/feature_weather/presentation/screens/home_s
 import 'bottom_navigation.dart';
 
 class MainWrapper extends StatelessWidget {
-  MainWrapper({Key? key}) : super(key: key);
+  MainWrapper({super.key});
 
-  final PageController pageController = PageController(initialPage: 0);
+  final PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,9 @@ class MainWrapper extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AppBackground.getBackGroundImage(), fit: BoxFit.cover),
+            image: AppBackground.getBackGroundImage(),
+            fit: BoxFit.cover,
+          ),
         ),
         height: height,
         child: PageView(

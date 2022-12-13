@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_dynamic_calls, use_super_parameters, prefer_final_locals, duplicate_ignore, require_trailing_commas, camel_case_types
+
 import 'package:weather_app/features/feature_weather/domain/entities/forecast_days_entity.dart';
 
 class ForecastDaysModel extends ForeCastDaysEntity {
@@ -10,13 +12,14 @@ class ForecastDaysModel extends ForeCastDaysEntity {
     List<Daily>? daily,
     List<Alerts>? alerts,
   }) : super(
-            lat: lat,
-            lon: lon,
-            timezone: timezone,
-            timezoneOffset: timezoneOffset,
-            current: current,
-            daily: daily,
-            alerts: alerts);
+          lat: lat,
+          lon: lon,
+          timezone: timezone,
+          timezoneOffset: timezoneOffset,
+          current: current,
+          daily: daily,
+          alerts: alerts,
+        );
 
   factory ForecastDaysModel.fromJson(dynamic json) {
     /// convert daily from json
@@ -39,6 +42,7 @@ class ForecastDaysModel extends ForeCastDaysEntity {
         lat: json['lat'].toDouble(),
         lon: json['lon'].toDouble(),
         timezone: json['timezone'],
+        // ignore: avoid_dynamic_calls
         timezoneOffset: json['timezone_offset'],
         current:
             json['current'] != null ? Current.fromJson(json['current']) : null,
@@ -472,6 +476,7 @@ class Current {
     _sunrise = json['sunrise'];
     _sunset = json['sunset'];
     _temp = json['temp'].toDouble();
+    // ignore: avoid_dynamic_calls
     _feelsLike = json['feels_like'].toDouble();
 
     _pressure = json['pressure'];

@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports
+
 import '../../../../core/usecase/use_case.dart.dart';
 import '../../data/model/suggest_city_model.dart';
 import '../repository/weather_repository.dart';

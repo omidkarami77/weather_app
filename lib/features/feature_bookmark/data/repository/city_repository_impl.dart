@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, prefer_final_locals, noop_primitive_operations, avoid_print, type_annotate_public_apis
+
 import 'package:weather_app/core/resources/data_state.dart';
 import 'package:weather_app/features/feature_bookmark/data/data_source/local/city_dao.dart';
 import 'package:weather_app/features/feature_bookmark/domain/entities/city_entity.dart';

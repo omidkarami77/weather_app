@@ -1,16 +1,16 @@
+// ignore_for_file: prefer_final_locals, prefer_const_constructors, type_annotate_public_apis
+
+import 'package:dio/dio.dart';
 import 'package:weather_app/core/params/ForecastParams.dart';
+import 'package:weather_app/core/resources/data_state.dart';
 import 'package:weather_app/features/feature_weather/data/data_source/remote/api_provider.dart';
 import 'package:weather_app/features/feature_weather/data/model/current_city_model.dart';
 import 'package:weather_app/features/feature_weather/data/model/forecast_days_models.dart';
+import 'package:weather_app/features/feature_weather/data/model/suggest_city_model.dart';
 import 'package:weather_app/features/feature_weather/domain/entities/current_city_entity.dart';
-import 'package:weather_app/core/resources/data_state.dart';
 import 'package:weather_app/features/feature_weather/domain/entities/forecast_days_entity.dart';
+import 'package:weather_app/features/feature_weather/domain/entities/suggest_city_entity.dart';
 import 'package:weather_app/features/feature_weather/domain/repository/weather_repository.dart';
-
-import 'package:dio/dio.dart';
-
-import '../../domain/entities/suggest_city_entity.dart';
-import '../model/suggest_city_model.dart';
 
 class WeatherRepositoryImpl extends WeatherRepository {
   ApiProvider apiProvider;
@@ -19,7 +19,8 @@ class WeatherRepositoryImpl extends WeatherRepository {
 
   @override
   Future<DataState<CurrentCityEntity>> fetchCurrentWeatherData(
-      String cityName) async {
+    String cityName,
+  ) async {
     try {
       Response response = await apiProvider.callCurrentWeather(cityName);
       if (response.statusCode == 200) {
@@ -36,7 +37,8 @@ class WeatherRepositoryImpl extends WeatherRepository {
 
   @override
   Future<DataState<ForeCastDaysEntity>> fetchForeCastWeatherData(
-      ForeCastParams params) async {
+    ForeCastParams params,
+  ) async {
     try {
       Response response = await apiProvider.sendRequest7DaysForcast(params);
 

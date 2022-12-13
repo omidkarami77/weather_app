@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports, require_trailing_commas, avoid_dynamic_calls
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/utils/date_converter.dart';
@@ -53,7 +55,7 @@ class _DaysWeatherViewState extends State<DaysWeatherView>
                 child: Column(
                   children: [
                     Text(
-                      DateConverter.changeDtToDateTime(widget.daily.dt),
+                      DateConverter.changeDtToDateTime(widget.daily.dt!),
                       style: const TextStyle(fontSize: 12, color: Colors.grey),
                     ),
                     Padding(

@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: require_trailing_commas, cast_nullable_to_non_nullable
+
 part of 'database.dart';
 
 // **************************************************************************

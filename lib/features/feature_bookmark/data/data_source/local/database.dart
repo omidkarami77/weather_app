@@ -3,6 +3,7 @@
 // required package imports
 import 'dart:async';
 import 'package:floor/floor.dart';
+// ignore: depend_on_referenced_packages
 import 'package:sqflite/sqflite.dart' as sqflite;
 import 'package:weather_app/features/feature_bookmark/data/data_source/local/city_dao.dart';
 import 'package:weather_app/features/feature_bookmark/domain/entities/city_entity.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, unnecessary_this, require_trailing_commas
+
 part of 'home_bloc.dart';
 
 class HomeState extends Equatable {

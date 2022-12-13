@@ -1,3 +1,5 @@
+// ignore_for_file: always_use_package_imports
+
 import '../../../../core/resources/data_state.dart';
 import '../../../../core/usecase/use_case.dart.dart';
 import '../../../feature_weather/domain/repository/city_repository.dart';

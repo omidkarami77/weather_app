@@ -1,6 +1,8 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:equatable/equatable.dart';
 
-import '../../data/model/suggest_city_model.dart';
+import 'package:weather_app/features/feature_weather/data/model/suggest_city_model.dart';
 
 class SuggestCityEntity extends Equatable {
   final List<Data>? data;
@@ -9,13 +11,11 @@ class SuggestCityEntity extends Equatable {
   SuggestCityEntity({this.data, this.metadata});
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
         data,
         metadata,
       ];
 
   @override
-  // TODO: implement stringify
   bool? get stringify => true;
 }

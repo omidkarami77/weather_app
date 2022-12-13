@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters, prefer_final_locals, require_trailing_commas
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
