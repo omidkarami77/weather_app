@@ -1,4 +1,5 @@
 # weather
+- Use Clean Architect
 - Use Open Weather Map Api
 - Use Dio 
 - Use Bloc
